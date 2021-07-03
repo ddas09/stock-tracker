@@ -1,0 +1,28 @@
+<form (ngSubmit)="addStock()" #stockForm="ngForm">
+    <div class="form-heading">
+        <h2>Add Stock</h2>
+    </div>
+
+    <div class="form-group">
+        <label for="symbol">Symbol</label>
+        <input type="text" class="form-control" id="symbol" name="symbol" autocomplete="off"
+        [(ngModel)]="stock.symbol" #symbol="ngModel" placeholder="Enter stock symbol" required>
+    </div>
+    
+    <div class="form-group">
+        <label for="name">Name</label>
+        <input type="text" class="form-control" id="name" name="name" autocomplete="off"
+        [(ngModel)]="stock.name" #name="ngModel" placeholder="Enter stock name" required>
+    </div>
+    
+    <div class="form-group">
+        <label for="price">Price</label>
+        <input type="number" class="form-control" id="price" name="price" autocomplete="off"
+        [(ngModel)]="stock.price"  #price="ngModel" placeholder="Enter stock price" required>
+    </div>
+
+    <div *ngIf="error" class="alert"><h3>{{error}}</h3></div>
+    <div *ngIf="info" class="success"><h3>{{info}}</h3></div>
+    
+    <button type="submit" class="btn-submit btn" [disabled]="!stockForm.form.valid">Add Stock</button>
+</form>

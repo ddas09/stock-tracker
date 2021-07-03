@@ -1,0 +1,14 @@
+<mat-toolbar class="navbar" color="primary">
+    <div class="nav-head">
+        <h2>Stock Tracker</h2>
+        <label for="click" class="nav-toggler">
+            <mat-icon (click)="toggleMenuIcon()">{{icon}}</mat-icon>
+        </label>
+    </div>
+    <input type="checkbox" id="click">
+    <div class="nav-links">
+        <a mat-button routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}" routerLink="">HOME</a>
+        <a mat-button routerLinkActive="active" routerLink="add-stock">INSERT</a>
+        <a mat-button routerLinkActive="active" routerLink="update-stock">UPDATE</a>
+    </div>
+</mat-toolbar>

@@ -1,0 +1,44 @@
+.stock-table {
+    margin: 20px auto;
+    width: 98%;
+    max-width: 1000px;
+}
+
+table {
+    width: 100%;
+}
+
+td, th {
+    padding: 0 10px !important;
+}
+
+.mat-header-cell {
+    font-size: 16px;
+    color: rgb(104, 103, 103);
+}
+
+.mat-column-action {
+    text-align: center;
+}
+
+.mat-column-price {
+    white-space: nowrap;
+}
+
+.mat-raised-button:hover {
+    transform: scale(1.15);
+    transition: 0.4s;
+}
+
+.no-data {
+    font-size: 20px;
+    text-align: center;
+    padding: 10px 0;
+    color: #097bbf;
+}
+
+.mat-paginator {
+    display: flex;
+    justify-content: center;
+    color: #097bbf;
+} 
